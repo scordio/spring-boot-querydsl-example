@@ -3,6 +3,7 @@ package com.example.model;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import org.mapstruct.Mapper;
 
 @Entity
 public class Person {
@@ -27,6 +28,11 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Mapper
+    interface InnerMapper {
+
     }
 
 }
